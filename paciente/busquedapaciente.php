@@ -9,11 +9,11 @@ $activo = "paciente"?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
-        <link href="/prueba1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="/prueba1/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
-        <script src="jquery-1.9.1.js"></script>
-        <script src="/prueba1/js/bootstrap.min.js"></script>
-        <script src="/prueba1/js/scripts.js"></script>
+        <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/scripts.js"></script>
         <!-- fin cosas de Bootstrap -->
           <title>Pacientes </title>
           <style type="text/css"> 
@@ -26,26 +26,26 @@ $activo = "paciente"?>
    </head>
  
    <body> 
-       <!-- aca van las cosas de la barra ---> 
+       <!-- aca van las cosas de la barra --> 
    <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
            <div class="container">
-            <a class="brand" href="/prueba1/index.php">Historias clinicas  </a>
+            <a class="brand" href="/SistemaOdonto/index.php">Historias clinicas  </a>
             <ul class="nav">
-                <li class="<?php echo ($activo == "paciente") ? 'active' : ''; ?>"><a href="/prueba1/paciente/busquedapaciente.php">Pacientes</a></li>
-                <li class="<?php echo ($activo == "Anotaciones por mes") ? 'active' : ''; ?>"><a href="/prueba1/anotaciones/anotacionpormes.php">Anotaciones por mes</a></li>
+                <li class="<?php echo ($activo == "paciente") ? 'active' : ''; ?>"><a href="/SistemaOdonto/paciente/busquedapaciente.php">Pacientes</a></li>
+                <li class="<?php echo ($activo == "Anotaciones por mes") ? 'active' : ''; ?>"><a href="/SistemaOdonto/anotaciones/anotacionpormes.php">Anotaciones por mes</a></li>
             </ul>
            </div>
         </div>
    </div>
-       <!-- fin de la  barra --->
+       <!-- fin de la  barra -->
        <div class="container" >
               <h2 >  Buscar Pacientes</h2>             
              <div class="row">
                      <div class="span10">
                          
                      </div>
-                        <a class="btn btn-info"href="/prueba1/paciente/altapaciente.php">agregar nuevo paciente <i class="icon-plus icon-white"></i></a>
+                        <a class="btn btn-info"href="/SistemaOdonto/paciente/altapaciente.php">agregar nuevo paciente <i class="icon-plus icon-white"></i></a>
              </div>
               <hr >
                <!--buscador -->
@@ -102,10 +102,10 @@ $activo = "paciente"?>
                                     <td id="centrado"><?php echo $row['obraSocial'] ?></td>
                                    
                                     <td id="centrado">
-                                        <a href="/prueba1/paciente/verdetallepaciente.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-mini"><i class="icon-white icon-plus"></i> Ver detalles</a> 
-                                        <a href="/prueba1/paciente/editarpaciente.php?id=<?php echo $row['id']?>" class="btn btn-success btn-mini"><i class="icon-white icon-pencil"></i> Modificar</a>
-                                        <a id="borrar" href="borrarpaciente.php?id=<?php echo $row['id']?>" id="borrarpaciente" class="btn btn-danger btn-mini"><i class="icon-white icon-remove"></i> Eliminar</a>
-                                       
+                                        <a href="verdetallepaciente.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-mini"><i class="icon-white icon-plus"></i> Ver detalles</a> 
+                                        <a href="editarpaciente.php?id=<?php echo $row['id']?>" class="btn btn-success btn-mini"><i class="icon-white icon-pencil"></i> Modificar</a>
+                                        <a href="borrarpaciente.php?id=<?php echo $row['id']?>" id="borrar" class="btn btn-danger btn-mini"><i class="icon-white icon-remove"></i>Borrar</a>
+                                        
                                     </td>
                                    
                                 </tr>
