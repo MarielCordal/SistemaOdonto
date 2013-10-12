@@ -37,190 +37,114 @@ $activo = "paciente";
         </div>
    </div>
        <!-- fin de la  barra -->
-              <h3 align =" center">Agregar un paciente</h3>
-              <hr>
-                <form align="center"class="form-horizontal">
-                    <fieldset>
-                         <br>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                          <input type="text" id="nombre" name="nombre" placeholder="Ingrese Nombre" class="input-xlarge">  <br>  <br>
-                        </div>
-                      </div>
-                       
-               <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese Apellido" class="input-xlarge">  <br>  <br>
-                        </div>
-                      </div>
-                           
-              <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="dni" name="dni" placeholder="Ingrese DNI" class="input-xlarge">  <br> <br>
-                        </div>
-                      </div>
-                           
-         <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls"> 
-                            <input type="text" id="sexo" name="sexo" placeholder="Ingrese Sexo" class="input-xlarge">    <br>   <br>
-                        </div>
-                      </div>
-                          
-                <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="edad" name="edad" placeholder="Ingrese Edad" class="input-xlarge">  <br> <br>
-                        </div>
-                      </div>
-                            
-                <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="obraSocial" name="obraSocial" placeholder="Ingrese Obra social" class="input-xlarge"> <br><br>
-                        </div>
-                      </div>
-                             
-                  <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="fechaIngreso" name="fechaIngreso" placeholder="Ingrese Fecha de hoy" class="input-xlarge"> <br><br>
-                        </div>
-                      </div>
-                             
-                 <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                              <textarea name="observaciones" rows="10" cols="80" placeholder="Ingrese Observaciones"></textarea>
-                              <br>  <br>
-                        </div>
-                      </div>
-                       
-             <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="cantrx" name="cantrx" placeholder="Ingrese Cantidad de radiografias" class="input-xlarge"> <br><br>
-                        </div>
-                      </div>
-                             
-                <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="dom" name="dom" placeholder="Ingrese Domicilio" class="input-xlarge">         <br>        <br>
-                        </div>
-                      </div>
+       <div class="span4 offset4">
+           <fieldset>
+              <h3 >Agregar un paciente</h3>
+                <form class="" id="formularioAltaPaciente" action="realizarAltaPaciente.php" method="GET">
+                           <input type="text" id="nombre" name="nombre" placeholder="Ingrese Nombre" onKeyUp="this.value=this.value.toUpperCase();" class="input-xlarge">  <br> 
+          <!-- ------------------------------------>
                      
+                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese Apellido" onKeyUp="this.value=this.value.toUpperCase();" class="input-xlarge">  <br>
+               
+              <!-- ------------------------------------>
+                           <input type="text" id="numeroAfiliado" name="numeroAfiliado" placeholder="Ingrese numero de afiliado" onKeyUp="this.value=this.value.toUpperCase();" class="input-xlarge">  <br>
+
+                            <input type="text" id="dni" name="dni" placeholder="Ingrese DNI" class="input-xlarge">  <br> 
+                    
+         <!-- ------------------------------------>
+                     
+                            <input type="text" id="sexo" name="sexo" placeholder="Ingrese Sexo" onKeyUp="this.value=this.value.toUpperCase();" class="input-xlarge">    <br>   
+                 
+                <!-- ------------------------------------>
+    
+                            <input type="text" id="edad" name="edad" placeholder="Ingrese Edad" class="input-xlarge">  <br>
+                    
+                <!-- ------------------------------------>
+                              <input type="text" id="obraSocial" name="obraSocial" placeholder="Ingrese Obra social" onKeyUp="this.value=this.value.toUpperCase();" class="input-xlarge"> <br>
+                 <!-- ------------------------------------>
+               
+                            <input type="text" id="fechaIngreso" name="fechaIngreso" placeholder="Ingrese Fecha de hoy" class="input-xlarge"> <br>
+                  
+                 <!-- ------------------------------------>
+                            <textarea id="observaciones "name="observaciones" rows="10" cols="80" placeholder="Ingrese Observaciones"></textarea>
+                              <br>  
+                
+             <!-- ------------------------------------> 
+                            <input type="text" id="cantrx" name="cantrx" placeholder="Ingrese Cantidad de radiografias" class="input-xlarge"> <br>
+                      
+                <!-- ------------------------------------>
+                
+                            <input type="text" id="dom" name="dom" placeholder="Ingrese Domicilio" class="input-xlarge">         <br>
+                  
                         <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="localidad" name="localidad" placeholder="Ingrese Localidad" class="input-xlarge"> <br><br>
-                        </div>
-                      </div>
-                                 
+               
+                            <input type="text" id="localidad" name="localidad" placeholder="Ingrese Localidad" onKeyUp="this.value=this.value.toUpperCase();" class="input-xlarge"><br>
+                         
                         <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="telefono" name="telefono" placeholder="Ingrese Telefono" class="input-xlarge">    <br>   <br>
-                        </div>
-                      </div>
-                          
-                        <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="celular" name="celular" placeholder="Ingrese Celular" class="input-xlarge">      <br>     <br>
-                        </div>
-                      </div>
+     
+                            <input type="text" id="telefono" name="telefono" placeholder="Ingrese Telefono" class="input-xlarge">      <br>
                     
                         <!-- ------------------------------------>
-                     <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="email" name="email" placeholder="Ingrese Email" class="input-xlarge">     <br>     <br>
-                        </div>
-                      </div>
+               
+                            <input type="text" id="celular" name="celular" placeholder="Ingrese Celular" class="input-xlarge">        <br>
+                     
                         <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
+ 
+                            <input type="text" id="email" name="email" placeholder="Ingrese Email" class="input-xlarge">     <br>     
+                       
+                        <!-- ------------------------------------>
+         
                             <textarea name="tratamiento" rows="10" cols="40" placeholder="Ingrese Tratamiento"></textarea>
                                  <br>     <br>
-                        </div>
-                      </div>
+                      
                         <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="alergia" name="alergia" placeholder="Alergia" class="input-xlarge">     <br>     <br>
-                        </div>
-                      </div>
+                   
+                            <input type="text" id="alergia" name="alergia" placeholder="Alergia" class="input-xlarge">     <br>   
+                   
                         <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
+                
                           <label for="cardiaco"> Cardiaco </label><input id="cardiaco" type="checkbox">
                              <br>     <br>
-                        </div>
-                      </div>
+                  
                            <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
-                            <input type="text" id="presion" name="presion" placeholder="Presion" class="input-xlarge">     <br>     <br>
-                        </div>
-                      </div>
+          
+                            <input type="text" id="presion" name="presion" placeholder="Presion" onKeyUp="this.value=this.value.toUpperCase();" class="input-xlarge">     <br> 
+                     
                         <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
+         
                           <label for="epilepsia">Epilepsia</label><input id="epilepsia" type="checkbox">
-                        </div>
-                      </div>
+                     
                           <!-- ------------------------------------>
-                      <div class="span11" class="control-group">
-                        <div class="controls">
+       
                           <label for="hepatitis">Hepatitis</label><input id="hepatitis" type="checkbox">
-                        </div>
-                      </div>
+                      
                          <!-- ------------------------------------>
-                     <div class="span11" class="control-group">
-                        <div class="controls">
+         
                           <label for="diabetico">Diabetico</label><input id="diabetico" type="checkbox">
-                        </div>
-                      </div>
+                   
                          <!-- ------------------------------------>
-                     <div class="span11" class="control-group">
-                        <div class="controls">
+                     
                           <label for="asma">ASMA</label><input id="asma" type="checkbox">
-                        </div>
-                      </div>
+                      
                          <!-- ------------------------------------>
-                     <div class="span11" class="control-group">
-                        <div class="controls">
+                    
                           <label for="ulceras">Ulceras</label><input id="ulceras" type="checkbox">
-                        </div>
-                      </div>
+                       
                           <!-- ------------------------------------>
-                     <div class="span11" class="control-group">
-                        <div class="controls">
-                            <label for="hiv">HIV</label><input id="hiv" type="checkbox"> <br> <br> 
-                        </div>
-                      </div>
+                  
+                            <label for="hiv">HIV</label><input id="hiv" type="checkbox"> <br>
+                      
                     <div  class="span11" class="control-group">
                         <!-- Boton -->
                         <div class="controls">
-                          <a class="btn btn-large btn-success">Agregar</a>
-                          <a class="btn btn-large btn-primary">Cancelar </a>
+                          <a href='#' id="botonalta" class="btn btn-large btn-success" onclick="">Agregar</a>
+                          <a class="btn btn-large btn-primary" href='busquedapaciente.php'>Cancelar </a>
                         </div>
                  </div>
-                    </fieldset>
+                          
+                    
                 </form>
-              
-            
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
+              </fieldset>
+            </div>      
    </body> 
 </html>
