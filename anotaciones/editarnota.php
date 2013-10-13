@@ -1,6 +1,11 @@
 <?php 
 include "../conectar.php" ;
 $activo = "Anotaciones por mes";
+$id = $_GET['id'];
+$query = "SELECT * FROM anotacionesMes
+					WHERE id = $id
+					";
+$result = mysql_query($query);
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,6 +44,7 @@ $activo = "Anotaciones por mes";
        <!-- fin de la  barra -->
        <div class="container" >
        <!-- TABLA PARA MOSTRAR CONTENIDO (beta) -->
+       <form action="notaeditada.php" method="POST">
          <table class="table table-bordered table-hover ">
             <thead>
               <tr>
@@ -48,52 +54,22 @@ $activo = "Anotaciones por mes";
               </tr>
             </thead>
             <tbody>
-              <?php 
-              //-----------------------
-                function recortar_texto($texto, $limite=100){   
-                $texto = trim($texto);
-                $texto = strip_tags($texto);
-                $tamano = strlen($texto);
-                $resultado = '';
-                if($tamano <= $limite){
-                    return $texto;
-                }else{
-                    $texto = substr($texto, 0, $limite);
-                    $palabras = explode(' ', $texto);
-                    $resultado = implode(' ', $palabras);
-                    $resultado .= '...';
-                }   
-                return $resultado;
-                }
-                //---------------------
-                $query = "SELECT * FROM anotacionesMes";
-                $result = mysql_query($query);
-                while ($row =  mysql_fetch_array($result)){
-                ?>
-                <tr>
-                  <td id="centrado"><?php echo $row['mes']?></td>
-                  <?php if ($row['nota'] != ""){?>
-                    <td id="centrado"><?php echo recortar_texto($row['nota'], 80)?><a href="verNota.php?id=<?php echo $row['id']?>">Ver Más</a></td>
-                  <?php }else{ ?>
-                    <td id="centrado"></td>
-                  <?php } ?>
-                  <td>
-                    <?php if ($row['nota'] == ""){?>
-                    <a href="nuevanota.php?id= <?php echo$row['id'];?>">NUEVA </a>
-                    <?php }else { ?>
-                    <a href="editarnota.php?id= <?php echo$row['id'];?>">EDITAR </a>
-                    <a href="borrarnota.php?id= <?php echo$row['id'];?>">ELIMINAR </a>
-                    <?php } ?>
-                  </td>
-                </tr>
-                <?php
-                }
-              ?>
+            	<?php while ($row = mysql_fetch_array($result)) {?>
+            	<tr>
+            		<th><?php echo $row['mes']?></th>
+            		<th><textarea name="nota"><?php echo $row['nota']?></textarea></th>
+            		<th>
+            			<input type="submit" value="guardar">
+                  <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+            		</th>
+            	</tr>
+            	<?php }?>
             </tbody>
-         </table> 
+         </table>
+         </form> 
+         <a href="anotacionpormes.php">VOLVER</a>
        </div>
 
        
 
 </html>
-   
