@@ -147,9 +147,9 @@ $result = mysql_query($query1);
                         </div>  
                         
                         <div class="control-group">
-                             <label class="control-label" for="dni">Modificar Celular</label>
+                             <label class="control-label" for="dni">Modificar Tratamiento</label>
                             <div class="controls">
-                            <input id="celular" type="text" name="celular" placeholder="Celular" autocomplete="off" value="<?php echo $row['celular']?>">
+                            <input id="tratamiento" type="text" name="tratamiento" placeholder="Tratamiento" autocomplete="off" value="<?php echo $row['tratamiento']?>">
                             </div>
                         </div>
                         

@@ -94,7 +94,7 @@ $activo = "paciente";
                        
                         <!-- ------------------------------------>
          
-                            <textarea name="tratamiento" rows="10" cols="40" placeholder="Ingrese Tratamiento"></textarea>
+                            <textarea id="tratamiento" name="tratamiento" rows="10" cols="40" placeholder="Ingrese Tratamiento"></textarea>
                                  <br>     <br>
                       
                         <!-- ------------------------------------>
