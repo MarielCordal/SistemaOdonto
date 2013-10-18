@@ -45,7 +45,7 @@ $result = mysql_query($query1);
                <fieldset>
                    <h3>Modificar Paciente</h3>
                     <?php while ($row = mysql_fetch_array($result)){?>
-                    <form class="" id="formularioEditarPaciente" action="realizarModificarPaciente.php" method="GET">
+                    <form class="" id="formularioEditarPaciente" action="modificarpaciente.php" method="GET">
                         
                          <div class="control-group">
                             <label class="control-label" for="nombre">Modificar Nombre</label>
@@ -59,18 +59,19 @@ $result = mysql_query($query1);
                             <input id="apellido" type="text" name="apellido" placeholder="Apellido" onKeyUp="this.value=this.value.toUpperCase(); "autocomplete="off"value="<?php echo $row['apellido']?>">
                             </div>
                         </div>
+                          <div class="control-group">
+                             <label class="control-label" for="dni">Modificar DNI</label>
+                            <div class="controls">
+                            <input id="dni" type="text" name="dni" placeholder="DNI" autocomplete="off" value="<?php echo $row['dni']?>">
+                            </div>
+                        </div>
                         <div class="control-group">
                              <label class="control-label" for="dni">Modificar Numero de afiliado</label>
                             <div class="controls">
                             <input id="numeroAfiliado" type="text" name="numeroAfiliado" placeholder="numeroAfiliado" autocomplete="off" value="<?php echo $row['numeroAfiliado']?>">
                             </div>
                         </div>
-                         <div class="control-group">
-                             <label class="control-label" for="dni">Modificar DNI</label>
-                            <div class="controls">
-                            <input id="dni" type="text" name="dni" placeholder="DNI" autocomplete="off" value="<?php echo $row['dni']?>">
-                            </div>
-                        </div>
+                       
                         <div class="control-group">
                              <label class="control-label" for="dni">Modificar Sexo</label>
                             <div class="controls">
@@ -153,17 +154,88 @@ $result = mysql_query($query1);
                             </div>
                         </div>
                         
+                        <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Alergia</label>
+                            <div class="controls">
+                            <input id="alergia" type="text" name="alergia" placeholder="Alergia" autocomplete="off" value="<?php echo $row['alergia']?>">
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Cardiaco</label>
+                            <div class="controls">
+                            <input id="cardiaco" type="text" name="cardiaco" placeholder="Cardiaco" autocomplete="off" value="<?php echo $row['cardiaco']?>">
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Presion</label>
+                            <div class="controls">
+                            <input id="presion" type="text" name="presion" placeholder="Presion" autocomplete="off" value="<?php echo $row['presion']?>">
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Epilepsia</label>
+                            <div class="controls">
+                            <input id="epilepsia" type="text" name="epilepsia" placeholder="Epilepsia" autocomplete="off" value="<?php echo $row['epilepsia']?>">
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Hepatitis</label>
+                            <div class="controls">
+                            <input id="hepatitis" type="text" name="hepatitis" placeholder="Hepatitis" autocomplete="off" value="<?php echo $row['hepatitis']?>">
+                            </div>
+                        </div>
+                        
+                         <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Diabetico</label>
+                            <div class="controls">
+                            <input id="diabetico" type="text" name="diabetico" placeholder="Diabetico" autocomplete="off" value="<?php echo $row['diabetico']?>">
+                            </div>
+                        </div>
+                        
+                        
+                         <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Asma</label>
+                            <div class="controls">
+                            <input id="asma" type="text" name="asma" placeholder="Asma" autocomplete="off" value="<?php echo $row['asma']?>">
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                             <label class="control-label" for="dni">Modificar Ulceras</label>
+                            <div class="controls">
+                            <input id="ulceras" type="text" name="ulceras" placeholder="Ulceras" autocomplete="off" value="<?php echo $row['ulceras']?>">
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                             <label class="control-label" for="dni">Modificar HIV</label>
+                            <div class="controls">
+                            <input id="hiv" type="text" name="hiv" placeholder="HIV" autocomplete="off" value="<?php echo $row['hiv']?>">
+                            </div>
+                        </div>
+                        
+                        <div >
+                        <!-- Boton -->
+                        <div class="controls">
+                          <a href="#" id="botonmodificar" class="btn btn-large btn-success" onclick="">Guardar</a>
+                          <a href='busquedapaciente.php' class="btn btn-large btn-primary" >Cancelar </a>
+                           <input type="hidden" name="idPaciente" value="<?php echo $idPaciente ?>">
+
+                        </div>
+                        </div>
+                         <?php } ?>
                     </form>
-                    <?php } ?>  
+                     
                </fieldset>
                
            </div>
            
        </div>
-       
-       
-       
-       
+    
 </body> 
 </html>
       
