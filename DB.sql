@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-10-2013 a las 23:38:11
+-- Tiempo de generación: 20-10-2013 a las 22:59:46
 -- Versión del servidor: 5.5.32-0ubuntu0.13.04.1
 -- Versión de PHP: 5.4.9-4ubuntu2.3
 
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `paciente` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `tratamiento` varchar(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `alergia` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `cardiaco` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `cardiaco` int(2) NOT NULL,
   `presion` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `epilepsia` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   `hepatitis` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
@@ -111,10 +111,9 @@ CREATE TABLE IF NOT EXISTS `paciente` (
 --
 
 INSERT INTO `paciente` (`numeroAfiliado`, `nombre`, `apellido`, `dni`, `sexo`, `edad`, `obraSocial`, `fechaIngreso`, `observaciones`, `cantrx`, `dom`, `localidad`, `telefono`, `celular`, `email`, `tratamiento`, `alergia`, `cardiaco`, `presion`, `epilepsia`, `hepatitis`, `diabetico`, `asma`, `ulceras`, `hiv`, `id`, `eliminado`) VALUES
-(12354, 'mariel', 'cordal', 35179795, 'f', 23, 'sm', '0000-00-00', '', 0, '', '', 0, 0, '', '', 'si', '0', '', '0', '0', '0', '0', '0', '0', 1, 0),
-(567, 'paula', 'cordal', 37203451, 'f', 20, 'io', '0000-00-00', '', 0, '', '', 0, 0, '', '', '', '0', '', '0', '0', '0', '0', '0', '0', 2, 0),
-(642, 'hugo', 'cordal', 25123888, 'm', 0, 'hg', '0000-00-00', '', 0, '', '', 2345678, 1234567, '', '', 'sadhb', 'si', 'alta', 'si', 'no', 'no', 'si', 'si', 'si', 5, 0),
-(739, 'lidia', 'angeles', 12333217, 'f', 0, 'sm', '0000-00-00', 'awvfab\r\nsdbsdbn\r\n\r\n\r\nvdrslheŕkn\r\n\r\n\r\n<drmnhs<\r\n\r\n<rmhsn{l\r\nerewrhbv', 0, '', 'la palta ', 42233456, 236456789, 'asfdgfhjkddfgh', 'lalalalmdapfhpqanv', 'a muchas cosas', 'si', 'baja', 'si', '0', 'si', 'si', 'si', 'si', 6, 0);
+(12354, 'mariel', 'cordal', 35179795, 'f', 23, 'sm', '0000-00-00', '', 0, '', '', 0, 0, '', '', 'si', 0, 'baja', '0', '0', '0', '1', '0', '0', 1, 0),
+(567, 'paula', 'cordal', 37203451, 'f', 20, 'io', '0000-00-00', '', 0, '', '', 0, 0, '', '', '', 0, '', '0', '0', '0', '0', '0', '0', 2, 0),
+(5555, 'LIDIA', 'ANGELES', 35555, 'f', 40, 'SM', '0000-00-00', 'Una pequeña Observación', 0, '68 N12', 'LA PLATA', 4220693, 2147483647, 'unemail@hotmail.com', 'Esta en tratamiento', 'ácaros', 1, 'baja', '0', '0', '0', '1', '0', '0', 6, 0);
 
 -- --------------------------------------------------------
 
