@@ -27,7 +27,6 @@ $asma = $_GET['asma'];
 $ulceras = $_GET['ulceras'];
 $hiv = $_GET['hiv']; 
 
-
 $paciente = "UPDATE paciente pac SET numeroAfiliado='$numeroAfiliado' , nombre='$nombre' , apellido='$apellido' , dni='$dni'
     , sexo='$sexo', edad='$edad', obraSocial='$obraSocial', fechaIngreso='$fechaIngreso', observaciones='$observaciones'
     , cantrx='$cantrx', dom='$dom', localidad='$localidad', telefono='$telefono', celular='$celular', email='$email'
@@ -36,7 +35,7 @@ $paciente = "UPDATE paciente pac SET numeroAfiliado='$numeroAfiliado' , nombre='
         WHERE id = $id";
 
 mysql_query($paciente);
-header("location:editarpaciente.php");
+header("location:busquedapaciente.php");
 ?>
 
 
