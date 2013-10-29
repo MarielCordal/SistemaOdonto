@@ -18,7 +18,7 @@ $activo = "paciente"?>
           <title>Pacientes </title>
           <style type="text/css"> 
         body { 
-            background: #36D695;
+            background: #FFFFFF;
             background-repeat: repeat;
             padding-top: 90px ;
         } 
@@ -102,7 +102,7 @@ $activo = "paciente"?>
                                     <td id="centrado"><?php echo $row['obraSocial'] ?></td>
                                    
                                     <td id="centrado">
-                                        <a href="verdetallepaciente.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-mini"><i class="icon-white icon-plus"></i> Ver detalles</a> 
+                                        <a href="verpaciente.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-mini"><i class="icon-white icon-plus"></i> Ver detalles</a> 
                                         <a href="editarpaciente.php?id=<?php echo $row['id']?>" class="btn btn-success btn-mini"><i class="icon-white icon-pencil"></i> Modificar</a>
                                         <a href="borrarpaciente.php?id=<?php echo $row['id']?>" id="borrar" class="btn btn-danger btn-mini"><i class="icon-white icon-remove"></i>Borrar</a>
                                         

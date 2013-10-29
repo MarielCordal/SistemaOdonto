@@ -84,10 +84,7 @@ $result = mysql_query($query1);
                         <label>Email</label>
                         <input name="email" type="text" class="span3" value="<?php echo $row['email']?>">
                         
-                        
                     </div>
-
-                    
                 </div>
 
                 <hr>
@@ -113,7 +110,7 @@ $result = mysql_query($query1);
                         <div class="row">
                             <div class="span2">
                                 <!-- cardíaco -->
-                                <div class="control-group">
+                                <div class="control-group"> 
                                   <label class="control-label" for="cardiaco">CARDíACO</label>
                                   <div class="controls">
                                     <label class="radio inline" for="cardiaco-0">
@@ -237,11 +234,7 @@ $result = mysql_query($query1);
 
         <br><br>
         <!-- ################ ACA VA LO DE MARI ########################### -->
-                                             
-                         
-                      
-                        
-                     
+             
                         <!-- Boton -->
                       
                          <?php } ?>

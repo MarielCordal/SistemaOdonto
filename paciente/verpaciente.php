@@ -1,6 +1,11 @@
 <?php
 include "../conectar.php" ;
 $activo = "paciente";
+$id = $_GET['id'];
+$consulta = "SELECT *
+             FROM paciente as pac
+             WHERE id= $id"; 
+$resultado= mysql_query($consulta); 
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,62 +19,44 @@ $activo = "paciente";
         <script src="../js/jquery-1.9.1.js"></script>
         <script src="../js/bootstrap.min.js"></script>
           <!-- fin cosas de Bootstrap -->
-          <title>Paciente  </title>
+          <title>Paciente </title>
           <style type="text/css"> 
-        body { 
-            background:#FFFFFF;
-            background-repeat: repeat;
-            padding-top:90px;
-        } 
-        </style>      
+            body { 
+                background:#FFFFFF;
+                background-repeat: repeat;
+                padding-top:90px;
+            } 
+            </style>      
    </head>
-   <body> 
-       <!-- aca van las cosas de la barra --> 
-   <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-           <div class="container">
-            <a class="brand" href="/SistemaOdonto/index.php">Historias clinicas  </a>
-            <ul class="nav">
-                <li class="<?php echo ($activo == "paciente") ? 'active' : ''; ?>"><a href="/SistemaOdonto/paciente/busquedapaciente.php">Pacientes</a></li>
-                <li class="<?php echo ($activo == "Anotaciones por mes") ? 'active' : ''; ?>"><a href="/SistemaOdonto/anotaciones/anotacionpormes.php">Anotaciones por mes</a></li>
-            </ul>
-           </div>
-        </div>
-   </div>
-       <!-- fin de la  barra --->
-       <h3 align =" center">DETALLES DEL PACIENTE</h3>
-       <div  class="span5">
-        <div class="span8" >
-            <table  align="center"border=4 bordercolor="000000" id="tabla" class="table  collapse  " >
-                         <thead>
-                             <tr>
-                             <th id="centrado" class="span8"> </th>
-                             <th id="centrado" class="span8">Datos</th>
-
-                             </tr>
-                         </thead>
-                         <tbody>
-                             <?php
-                                $id = $_GET['id'];
-
-                                $consulta = "SELECT *
-                                             FROM paciente as pac
-                                             
-                                             WHERE id= $id"; 
-                             
-                                             
-                               $resultado= mysql_query($consulta);     
-                                while ($row = mysql_fetch_array($resultado) or die(mysql_error())){
-                               ?>
-                             
-                          <tr class=''> 
-                                 <td id="centrado"><b>Nombre</b></td>
-                                 <td id="centrado"><?php echo $row['nombre'] ?></td> 
-                          </tr>
-                          <tr class=''> 
-                                 <td align="right" ><b>Apellido</b></td>
-                                 <td id="centrado"><?php echo $row['apellido'] ?></td>           
-                          </tr>
+   <body>
+                <!-- aca van las cosas de la barra --> 
+         <div class="navbar navbar-fixed-top">
+              <div class="navbar-inner">
+                 <div class="container">
+                  <a class="brand" href="/SistemaOdonto/index.php">Historias clinicas  </a>
+                  <ul class="nav">
+                      <li class="<?php echo ($activo == "paciente") ? 'active' : ''; ?>"><a href="/SistemaOdonto/paciente/busquedapaciente.php">Pacientes</a></li>
+                      <li class="<?php echo ($activo == "Anotaciones por mes") ? 'active' : ''; ?>"><a href="/SistemaOdonto/anotaciones/anotacionpormes.php">Anotaciones por mes</a></li>
+                  </ul>
+                 </div>
+              </div>
+         </div>
+               <!-- fin de la  barra --->
+               <h3 align="center">DETALLES DEL PACIENTE</h3>
+               <?php while ($row = mysql_fetch_array($resultado) or die(mysql_error())){?>
+               <div class="container" >
+              
+                <table  class="table table-bordered table-hover ">
+                    <tbody>
+                        
+                        <tr class=''> 
+                             <td  id="centrado"><b>Nombre</b></td>
+                             <td    id="centrado"><?php echo $row['nombre'] ?></td> 
+                        </tr>
+                        <tr class=''> 
+                             <td align="right" ><b>Apellido</b></td>
+                             <td id="centrado"><?php echo $row['apellido'] ?></td>           
+                         </tr>
                           <tr class=''> 
                                  <td id="centrado"><b>Numero afiliado</b></td>
                                  <td id="centrado"><?php echo $row['numeroAfiliado'] ?></td>           
@@ -162,16 +149,18 @@ $activo = "paciente";
                                  <td id="centrado"><b>HIV</b></td>
                                  <td id="centrado"><?php echo $row['hiv'] ?></td>           
                           </tr>
-                          <?php }?> 
-                          </tbody>
-            </table>
-
-
-        </div>   
-       </div>
-       
-       
-       
-       
+                       
+                    </tbody>
+                </table>
+                   <div align="center" class="span12" class="control-group">
+                         
+                        <div class="controls">
+                          
+                          <a class="btn btn-large btn-primary" href='busquedapaciente.php'>Volver </a>
+                        </div>
+                 </div>
+                    <?php } ?>
+              
+               
    </body>
 </html>
