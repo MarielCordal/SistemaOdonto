@@ -225,7 +225,7 @@ $result = mysql_query($query1);
                         <textarea style="resize:none"name="observaciones" id="observaciones" class="input-xlarge span8" rows="10"><?php echo $row['observaciones']?></textarea>
                     </div>
                 </div>
-                <a href="#" id="botonmodificar" class="btn btn-large btn-success" onclick="formularioEditarPaciente.submit()">Guardar</a>
+                <a href="#" id="botonmodificar" class="btn btn-large btn-success" onclick="formularioEditarPaciente.submit();">Guardar</a>
                 <a href='busquedapaciente.php' class="btn btn-large btn-primary" >Cancelar </a>
                 <input type="hidden" name="idPaciente" value="<?php echo $idPaciente ?>">
             </form>           
